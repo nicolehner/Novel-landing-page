@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "novel-landing",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4173", "--directory", "/Users/nicolehner/Desktop/Novel landing page/novel-site-claude-code-handoff"],
+      "port": 4173
+    }
+  ]
+}
