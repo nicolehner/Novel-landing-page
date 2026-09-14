@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Novel Cocktail Co.</title>
+<meta name="description" content="Book a 15-minute sales call or tell us where you want Novel pouring next. Based in Santa Barbara County, California.">
+<link rel="canonical" href="https://drinknovel.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — Novel Cocktail Co.">
+<meta property="og:description" content="Book a 15-minute sales call or tell us where you want Novel pouring next. Based in Santa Barbara County, California.">
+<meta property="og:site_name" content="Novel Cocktail Co.">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310211d'/%3E%3Cline x1='32' y1='6' x2='32' y2='30' stroke='%23a0fa40' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='40' r='16' fill='none' stroke='%23a0fa40' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- AGE GATE -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <svg width="72" height="110" viewBox="0 0 72 110" style="margin:0 auto;display:block">
+      <line x1="36" y1="0" x2="36" y2="52" stroke="#a0fa40" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="36" cy="76" r="28" fill="none" stroke="#a0fa40" stroke-width="3"/>
+      <ellipse cx="36" cy="56" rx="12" ry="4.5" fill="none" stroke="#a0fa40" stroke-width="2" opacity=".7"/>
+    </svg>
+    <h2>Old enough to order?</h2>
+    <p>You must be 21 or older to enter. Please pour responsibly.</p>
+    <div class="gate-btns">
+      <button class="btn solid" onclick="enterSite()">I'm 21 or older</button>
+      <a class="btn" href="https://www.responsibility.org">Not yet</a>
+    </div>
+  </div>
+</div>
+
+<script>try{if(localStorage.getItem("novel21ok"))document.getElementById("gate").style.display="none"}catch(e){}</script>
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <a class="wordmark" href="index.html"><span class="n">Novel</span><span class="cc">Cocktail Co.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="cocktails.html">Cocktails</a>
+      <a href="operators.html">For Operators</a>
+      <a href="faq.html">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a class="btn nav-cta" href="contact.html">Book a call</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="cocktails.html">Cocktails</a>
+  <a href="operators.html">For Operators</a>
+  <a href="faq.html">FAQ</a>
+  <a href="blog.html">Blog</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html" class="active">Contact</a>
+</div>
+
+<main id="app">
+  <section class="section-pad on-stone">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="eyebrow rv">Contact</div>
+        <h1 class="rv" style="font-size:clamp(40px,5.4vw,66px);margin:22px 0 18px">Let's put a tap handle on it.</h1>
+        <p class="lead rv" style="color:#1a3934d9">Operators: book a 15-minute sales call and we'll bring the tasting to you. Drinkers: tell us where you want Novel pouring next.</p>
+        <div class="rv" style="margin-top:40px;display:grid;gap:18px;max-width:420px">
+          <div style="border-top:1.5px solid #1a393433;padding-top:16px"><b style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest)">Based in</b><p style="margin-top:6px">Santa Barbara County, California</p></div>
+          <div style="border-top:1.5px solid #1a393433;padding-top:16px"><b style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest)">Pouring across</b><p style="margin-top:6px">Santa Barbara · Ventura · San Luis Obispo</p></div>
+          <div style="border-top:1.5px solid #1a393433;padding-top:16px"><b style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest)">Typical reply</b><p style="margin-top:6px">Within one business day</p></div>
+        </div>
+      </div>
+      <div class="rv">
+        <form id="contactForm" novalidate>
+          <div>
+            <label>I am a…</label>
+            <div class="seg" id="whoSeg">
+              <button type="button" class="on" data-v="venue">Bar / restaurant operator</button>
+              <button type="button" data-v="drinker">Thirsty local</button>
+            </div>
+          </div>
+          <div class="frow">
+            <div><label for="f-name">Name</label><input id="f-name" required placeholder="Your name"></div>
+            <div><label for="f-email">Email</label><input id="f-email" type="email" required placeholder="you@example.com"></div>
+          </div>
+          <div class="frow venue-only">
+            <div><label for="f-venue">Venue name</label><input id="f-venue" placeholder="e.g., The Copper Room"></div>
+            <div><label for="f-city">City</label><input id="f-city" placeholder="e.g., Santa Barbara"></div>
+          </div>
+          <div class="frow venue-only">
+            <div><label for="f-lic">License type</label>
+              <select id="f-lic"><option>Type 41 — beer &amp; wine (on-sale, eating place)</option><option>Type 42 — beer &amp; wine (on-sale, public premises)</option><option>Type 47 — full liquor</option><option>Other / not sure</option></select></div>
+            <div><label for="f-draft">Existing draft system?</label>
+              <select id="f-draft"><option>Yes — we have open lines</option><option>No — we'd need the tabletop system</option><option>Not sure</option></select></div>
+          </div>
+          <div><label for="f-msg">Anything we should know?</label><textarea id="f-msg" placeholder="Volume, timeline, favorite margarita story…"></textarea></div>
+          <button class="btn ink solid" type="submit" id="submitBtn" style="justify-self:start;padding:16px 34px">Book my call →</button>
+          <p class="fineprint">By submitting, you agree to be contacted about Novel. We never share your info. 21+ only.</p>
+        </form>
+        <div class="success" id="formSuccess">
+          <svg width="54" height="82" viewBox="0 0 72 110" style="margin:0 auto 6px;display:block"><line x1="36" y1="0" x2="36" y2="52" stroke="#1a3934" stroke-width="3.5" stroke-linecap="round"/><circle cx="36" cy="76" r="28" fill="none" stroke="#1a3934" stroke-width="3"/><ellipse cx="36" cy="56" rx="12" ry="4.5" fill="none" stroke="#1a3934" stroke-width="2" opacity=".7"/></svg>
+          <h3 id="successH3">Almost there.</h3>
+          <p id="successBody">We've opened Calendly in a new tab — grab a 30-minute slot and we'll see you then.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-word">Novel<br><em>Cocktail Co.</em></div>
+        <p style="margin-top:20px;font-size:14px;color:#d4c8bc99;max-width:34ch">Brewed cocktails on draft. Made on California's Central Coast.</p>
+      </div>
+      <div class="foot-links">
+        <div><b>Explore</b><a href="cocktails.html">Cocktails</a><a href="blog.html">Blog</a><a href="team.html">Team</a><a href="faq.html">FAQ</a></div>
+        <div><b>Operators</b><a href="operators.html">How it works</a><a href="operators.html">Why it's legal</a><a href="contact.html">Book a sales call</a></div>
+        <div><b>Novel</b><a href="contact.html">Contact</a><a href="index.html">Santa Barbara County, CA</a></div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Novel Cocktail Co. · All rights reserved.</span>
+      <span>Please enjoy responsibly. 21+ only.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>initPage();</script>
+</body>
+</html>

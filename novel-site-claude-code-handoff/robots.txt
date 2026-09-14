@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drinknovel.com/sitemap.xml
